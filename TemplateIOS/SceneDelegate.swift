@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  TemplateIOS
-//
-//  Created by Golden Owl on 22/11/2022.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
