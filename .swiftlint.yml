@@ -96,6 +96,16 @@ identifier_name:
     error: 100
   allowed_symbols: "_" 			#ToDo: remove `allowed_symbols` section to restore default that forbids underscores, and resolve the errors
   validates_start_with_lowercase: true	#ToDo: remove `validates_start_with_lowercase` section to restore default that disallows identifier names (ex: enum property) with an uppercase
+  excluded:
+  - c
+  - i
+  - j
+  - k
+  - p
+  - q
+  - x
+  - y
+  - z
 
 #indentation_width:
 #  indentation_width: 2
