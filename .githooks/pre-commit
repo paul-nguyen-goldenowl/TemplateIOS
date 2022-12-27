@@ -1,0 +1,8 @@
+#!/bin/bash
+
+for file_path in $(git diff --name-only --cached | grep ".swift$"); do
+	echo Formatting ${file_path} ...
+    npx git-format-staged --formatter "swiftformat stdin --stdinpath '{}'" "${file_path}"
+done
+
+echo "\nDone!"

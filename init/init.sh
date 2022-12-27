@@ -33,11 +33,11 @@ npm install --global git-format-staged
 
 # pre-commit
 git init .
-git add .
-git commit -m "init project"
+# git add .
+# git commit -m "init project"
 
-cp init/pre-commit .git/hooks/
-chmod +x .git/hooks/pre-commit
+# cp init/pre-commit .git/hooks/
+# chmod +x .git/hooks/pre-commit
 
 # remove new file comment
 # mkdir -p ~/Library/Developer/Xcode/Templates/File\ Templates/Source
