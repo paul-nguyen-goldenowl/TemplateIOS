@@ -34,7 +34,7 @@ jobs:
         shell: bash
       - name: Xcode iOS build
         run: |
-          xcodebuild clean build -scheme TemplateIOS -destination 'platform=iOS Simulator,name=iPhone 14 Pro,OS=16.0'
+          xcodebuild -workspace TemplateIOS.xcworkspace -scheme TemplateIOS -destination 'platform=iOS Simulator,name=iPhone 14 Pro,OS=16.0' | xcpretty 
       - name: cache size
         run: |
           du -sh  ~/Library/Developer/Xcode/DerivedData/TemplateIOS-*
