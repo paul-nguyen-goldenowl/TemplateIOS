@@ -1,0 +1,144 @@
+excluded:
+  - ${PWD}/Carthage
+  - ${PWD}/Pods
+  - ${PWD}/DerivedData
+  - ${PWD}/Package.resolved
+  - ${PWD}/.build
+  - ${PWD}/.idea
+  - ${PWD}/.swiftpm
+  - ${PWD}/.git
+  - ${PWD}/Build
+
+disabled_rules:
+  - discarded_notification_center_observer
+  - notification_center_detachment
+  - orphaned_doc_comment
+  - todo
+  - unused_capture_list
+  - unused_setter_value
+  - trailing_comma
+
+opt_in_rules:
+  - array_init
+  - attributes
+  - closure_end_indentation
+  - closure_spacing
+  - collection_alignment
+  - colon # promote to error
+  - convenience_type
+  - discouraged_object_literal
+  - empty_collection_literal
+  - empty_count
+  - empty_string
+  - enum_case_associated_values_count
+  - fatal_error_message
+  - first_where
+  - force_unwrapping
+  - implicitly_unwrapped_optional
+#  - indentation_width
+  - last_where
+  - legacy_random
+  - literal_expression_end_indentation
+  - multiline_arguments
+#  - multiline_function_chains
+  - multiline_literal_brackets
+  - multiline_parameters
+  - multiline_parameters_brackets
+  - operator_usage_whitespace
+  - overridden_super_call
+  - pattern_matching_keywords
+  - prefer_self_type_over_type_of_self
+  - redundant_nil_coalescing
+  - redundant_type_annotation
+  - strict_fileprivate
+  - toggle_bool
+  - trailing_closure
+  - unneeded_parentheses_in_closure_argument
+  - unused_import
+  - vertical_whitespace_closing_braces
+  - vertical_whitespace_opening_braces
+  - yoda_condition
+
+custom_rules:
+  array_constructor:
+    name: "Array/Dictionary initializer"
+    regex: '[let,var] .+ = (\[.+\]\(\))'
+    capture_group: 1
+    message: "Use explicit type annotation when initializing empty arrays and dictionaries"
+    severity: warning
+
+attributes:
+  always_on_same_line:
+    - "@IBSegueAction"
+    - "@IBAction"
+    - "@NSManaged"
+    - "@objc"
+
+empty_count:
+  severity: warning
+
+file_length:				#ToDo: remove `file_length` section to restore default of w/e 400/1000, and resolve the errors
+  error: 1200
+
+force_cast: warning
+force_try: warning
+function_body_length:
+    warning: 60
+
+legacy_hashing: error
+
+identifier_name:
+  min_length:
+    warning: 2
+    error: 1
+  max_length:				#ToDo: remove `max_length` section to restore defaults of `w/e: 40/60`, and resolve the errors
+    warning: 40
+    error: 100
+  allowed_symbols: "_" 			#ToDo: remove `allowed_symbols` section to restore default that forbids underscores, and resolve the errors
+  validates_start_with_lowercase: true	#ToDo: remove `validates_start_with_lowercase` section to restore default that disallows identifier names (ex: enum property) with an uppercase
+  excluded:
+  - c
+  - i
+  - j
+  - k
+  - p
+  - q
+  - x
+  - y
+  - z
+
+#indentation_width:
+#  indentation_width: 2
+
+line_length:
+  warning: 120
+  ignores_urls: true
+  ignores_function_declarations: true
+  ignores_comments: true
+  error: 1000				#ToDo: remove `error` section to set the default to 200, and resolve the errors
+
+type_body_length: # Should remove this config to make by default
+  warning: 200
+  error: 1000
+
+multiline_arguments:
+  first_argument_location: next_line
+  only_enforce_after_first_closure_on_first_line: true
+
+private_over_fileprivate:
+  validate_extensions: true
+
+type_name:
+    min_length: 3
+    max_length: 100
+    allowed_symbols: "_"
+
+trailing_whitespace:
+  ignores_empty_lines: true
+  ignores_comments: true
+
+vertical_whitespace:
+  max_empty_lines: 2
+
+cyclomatic_complexity:
+  ignores_case_statements: true
