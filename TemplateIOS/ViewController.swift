@@ -5,5 +5,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = .blue
+
+        // This for check Lint
+        let a: Int
     }
 }

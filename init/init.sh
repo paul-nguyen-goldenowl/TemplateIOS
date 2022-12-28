@@ -31,6 +31,10 @@ rm -rf .git/
 brew install swiftformat
 npm install --global git-format-staged
 
+# pod
+echo "Installing Pod ..."
+pod install
+
 # pre-commit
 git init .
 # git add .
