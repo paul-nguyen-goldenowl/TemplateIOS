@@ -21,7 +21,6 @@ find . -name "*.DS_Store" -type f -delete
 
 # directories
 mv TemplateIOS ${APPNAME}
-mv TemplateIOS.xcodeproj/xcshareddata/xcschemes/TemplateIOS.xcscheme TemplateIOS.xcodeproj/xcshareddata/xcschemes/${APPNAME}.xcscheme
 mv TemplateIOS.xcodeproj ${APPNAME}.xcodeproj
 
 # Remove additional files
@@ -33,7 +32,7 @@ brew install swiftformat
 npm install --global git-format-staged
 
 # pod
-print("Installing Pod ...")
+echo "Installing Pod ..."
 pod install
 
 # pre-commit
