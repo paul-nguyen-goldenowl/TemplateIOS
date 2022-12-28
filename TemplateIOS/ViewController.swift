@@ -6,7 +6,7 @@ class ViewController: UIViewController {
 
         view.backgroundColor = .blue
 
-        let a = 123
-        print(a)
+        // This for check Lint
+        let a: Int
     }
 }
