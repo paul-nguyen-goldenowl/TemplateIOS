@@ -5,5 +5,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = .blue
+
+        let a = 123
     }
 }

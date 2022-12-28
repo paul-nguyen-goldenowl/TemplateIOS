@@ -21,8 +21,9 @@ find . -name "*.DS_Store" -type f -delete
 
 # directories
 mv TemplateIOS ${APPNAME}
+# mv TemplateIOS.xcodeproj/xcshareddata/xcschemes/TemplateIOS.xcscheme TemplateIOS.xcodeproj/xcshareddata/xcschemes/${APPNAME}.xcscheme
 mv TemplateIOS.xcodeproj ${APPNAME}.xcodeproj
-
+mv TemplateIOS.xcworkspace ${APPNAME}.xcworkspace
 # Remove additional files
 echo "Removing additional files"
 rm -rf .git/
