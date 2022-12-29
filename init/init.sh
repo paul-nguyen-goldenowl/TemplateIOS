@@ -28,7 +28,8 @@ echo "Removing additional files"
 rm -rf .git/
 
 # install
-brew install swiftformat
+echo "Install dependencies"
+brew list swiftformat || brew install swiftformat
 npm install --global git-format-staged
 
 # pod
@@ -47,6 +48,10 @@ git init .
 # mkdir -p ~/Library/Developer/Xcode/Templates/File\ Templates/Source
 # cp -R init/Custom\ File.xctemplate ~/Library/Developer/Xcode/Templates/File\ Templates/Source
 
+echo "Removing init folder ..."
 rm -rf init
+
+echo "Opening project ..."
+open ${APPNAME}.xcworkspace
 
 echo "Done!"
